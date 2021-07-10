@@ -1,0 +1,36 @@
+<div class="container">
+  {{!-- target card --}}
+  <form method="POST" action="/">
+    <div class="row row-cols-1 row-cols-md-3 g-4 m-3">
+      {{#each targets}}
+      <div class="col">
+        <div class="card">
+          <label class="form-check-label" for="{{this.id}}">
+            <img src="{{this.img}}" class="card-img-top" alt="{{this.id}}">
+            <div class="card-body-modify">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="target" id="{{this.id}}" value="{{this.id}}">
+                <h5 class="card-title">{{this.title}}</h5>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+    <div class="footer">
+      <div>
+        <button type="sunmit" class="btn btn-primary">產生幹話</button>
+      </div>
+
+      <div class="alert alert-primary col-9" role="alert">{{trashTalk}}
+      </div>
+    </div>
+  </form>
+</div>
+{{#if target}}
+<script>
+  document.querySelector(`input[value="{{target}}"]`).checked = true
+</script>
+{{/if}}

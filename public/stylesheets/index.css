@@ -1,0 +1,27 @@
+.col {
+  display: flex;
+}
+
+.card {
+  flex-direction: row;
+}
+
+.img-block {
+  flex: 1 1 auto;
+}
+
+label.form-check-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body-modify {
+  padding: 1rem 1rem;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
